@@ -12,7 +12,7 @@ This module enables users to retrieve below geolocation information from an IP a
   
 Installation
 ------------
-Upload `controllers` and `libraries` to CondeIngniter `application` folder.
+Upload `controllers` and `libraries` to CodeIngniter `application` folder.
 
 IP2Proxy BIN Database
 ------------------------
