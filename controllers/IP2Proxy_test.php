@@ -8,7 +8,7 @@ class IP2Proxy_test extends CI_Controller {
     }
 
     function index() {
-		$countryCode = $this->ip2proxy_lib->getCountryCode('8.8.8.8');
+		$countryCode = $this->ip2proxy_lib->getCountryShort('8.8.8.8');
 
 		echo '<p>Country code for 8.8.8.8: ' . $countryCode . '</p>';
 		
