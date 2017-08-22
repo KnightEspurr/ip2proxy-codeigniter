@@ -13,35 +13,35 @@ class IP2Proxy_lib {
 	protected static $ip2proxy;
 
 	public function __construct() {
-		self::$ip2proxy = new \ip2proxy\Database(ip2proxy_DATABASE, \ip2proxy\Database::FILE_IO);
+		self::$ip2proxy = new \IP2Proxy\Database(IP2PROXY_DATABASE, \IP2Proxy\Database::FILE_IO);
 	}
 
 	public function getCountryShort($ip=NULL) {
-		return self::$ip2proxy->lookup(self::getIP($ip), \ip2proxy\Database::COUNTRY_CODE);
+		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::COUNTRY_CODE);
 	}
 
 	public function getCountryLong($ip=NULL) {
-		return self::$ip2proxy->lookup(self::getIP($ip), \ip2proxy\Database::COUNTRY_NAME);
+		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::COUNTRY_NAME);
 	}
 
 	public function getRegion($ip=NULL) {
-		return self::$ip2proxy->lookup(self::getIP($ip), \ip2proxy\Database::REGION_NAME);
+		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::REGION_NAME);
 	}
 
 	public function getCity($ip=NULL) {
-		return self::$ip2proxy->lookup(self::getIP($ip), \ip2proxy\Database::CITY_NAME);
+		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::CITY_NAME);
 	}
 
 	public function getISP($ip=NULL) {
-		return self::$ip2proxy->lookup(self::getIP($ip), \ip2proxy\Database::ISP);
+		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::ISP);
 	}
 
 	public function getProxyType($ip=NULL) {
-		return self::$ip2proxy->lookup(self::getIP($ip), \ip2proxy\Database::PROXY_TYPE);
+		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::PROXY_TYPE);
 	}
 
 	public function isProxy($ip=NULL) {
-		return self::$ip2proxy->lookup(self::getIP($ip), \ip2proxy\Database::IS_PROXY);
+		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::IS_PROXY);
 	}
 
 	protected function getIP($ip=NULL) {
