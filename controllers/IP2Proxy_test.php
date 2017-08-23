@@ -4,11 +4,11 @@ date_default_timezone_set('Etc/UTC');
 class IP2Proxy_test extends CI_Controller {
     function __construct() {
 		parent::__construct();
-		$this->load->library('IP2Proxy_lib');
+		$this->load->library('ip2proxy_lib');
     }
 
     function index() {
-		$countryCode = $this->IP2Proxy_lib->getCountryShort('8.8.8.8');
+		$countryCode = $this->ip2proxy_lib->getCountryShort('8.8.8.8');
 
 		echo '<p>Country code for 8.8.8.8: ' . $countryCode . '</p>';
 		
